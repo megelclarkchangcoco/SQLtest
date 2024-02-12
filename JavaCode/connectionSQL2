@@ -1,0 +1,26 @@
+package Test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class connectionSQL2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+		try {
+			String Url = "jdbc:sqlserver://DESKTOP-FEGPR4D\\SQLEXPRESS;databaseName=testDB;integratedSecurity=true;encrypt=false;";
+			Connection conn = DriverManager.getConnection(Url);
+			System.out.println("Connection Succes!");
+		}catch(SQLException e) {
+			System.out.println("Connection Failed!");
+			e.printStackTrace();
+		}
+		
+		
+	
+		
+	}
+
+}
